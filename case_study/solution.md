@@ -1,4 +1,4 @@
-# AutoDS Product Management Case Study
+# Improving User Activation and Paid Orders at AutoDS
 
 ## Overview
 
@@ -6,9 +6,9 @@ The objective was to analyze the current product experience and propose product 
 
 The analysis is based on:
 
-* Publicly available information about AutoDS
-* UX audit of the onboarding flow
-* Product walkthrough
+- Publicly available information about AutoDS
+- UX audit of the onboarding flow
+- Product walkthrough
 
 Disclaimer: Since this case study is based on publicly available information, some assumptions were made regarding user behavior and internal product metrics. Where appropriate, I explicitly indicate which hypotheses require validation through analytics or user research.
 
@@ -16,12 +16,12 @@ Disclaimer: Since this case study is based on publicly available information, so
 
 AutoDS is an all-in-one dropshipping automation platform that helps merchants manage the entire dropshipping workflow, including:
 
-* Product research
-* Product importing
-* Inventory and price monitoring
-* Order fulfillment
-* Customer support automation
-* Pricing optimization
+- Product research
+- Product importing
+- Inventory and price monitoring
+- Order fulfillment
+- Customer support automation
+- Pricing optimization
 
 The assignment states that most AutoDS customers are beginners who are just starting their dropshipping journey.
 
@@ -35,9 +35,9 @@ The assignment defines the following OKRs:
 
 Supporting KPIs:
 
-* Increase AutoDS Paid Orders from 9,000 --> 12,000
-* Reduce Day-0 Churn from 13.3% --> 9%
-* Expand the Product Finding offering
+- Increase AutoDS Paid Orders from 9,000 --> 12,000
+- Reduce Day-0 Churn from 13.3% --> 9%
+- Expand the Product Finding offering
 
 These KPIs are closely connected. Increasing paid orders requires more users to successfully activate and generate their first sales. Reducing Day-0 churn requires users to experience value earlier.
 Expanding Product Finding should improve merchants’ ability to discover products that actually generate sales—not simply increase the number of available products.
@@ -50,7 +50,6 @@ Current User Journey
 Based on the product walkthrough, the expected user flow appears to be:
 
 ![User Flow](images/flow.svg)
-
 
 To increase paid orders by 33%, there are two possible growth levers:
 
@@ -76,18 +75,17 @@ Transform Product Finding into an outcome-driven recommendation system.
 
 For each product display:
 
-* First Sale Score
-* Demand Trend
-* Competition Score
-* Expected Profitability
-* Recommended for Your Store
+- First Sale Score
+- Demand Trend
+- Competition Score
+- Expected Profitability
+- Recommended for Your Store
 
 Expected impact:
 
-* Better product decisions
-* More first sales
-* More paid orders
-
+- Better product decisions
+- More first sales
+- More paid orders
 
 ### Problem 2
 
@@ -100,19 +98,18 @@ Create an activation flow focused on a single outcome: "Get Your First Sale"
 
 Example checklist:
 
-* Connect Store
-* Import Product
-* Configure Pricing
-* Publish Product
-* Launch Marketing
-* Receive First Order
+- Connect Store
+- Import Product
+- Configure Pricing
+- Publish Product
+- Launch Marketing
+- Receive First Order
 
 Expected impact:
 
-* Faster Time-to-Value
-* Increased activation
-* Higher number of processed orders
-
+- Faster Time-to-Value
+- Increased activation
+- Higher number of processed orders
 
 ### Problem 3
 
@@ -128,42 +125,180 @@ Example:
 
 Product has low sales probability because:
 
-* Delivery time is above market average
-* Price is higher than competitors
-* Product title quality is poor
+- Delivery time is above market average
+- Price is higher than competitors
+- Product title quality is poor
 
 Expected impact:
 
-* Better optimization decisions
-* Higher probability of first sale
-
-
-
+- Better optimization decisions
+- Higher probability of first sale
 
 To validate these assumptions I would analyze:
 
-* Sign Up --> First Product Import conversion
-* Product Import -->  First Order conversion
-* Percentage of stores with at least one paid order
-* Paid Orders per Active Store
+- Sign Up --> First Product Import conversion
+- Product Import --> First Order conversion
+- Percentage of stores with at least one paid order
+- Paid Orders per Active Store
 
 ### KPI B: Reduce Day-0 Churn
+
+UX Audit
+
+During onboarding I observed the following flow:
+
+![Current User Flow](images/current_flow.svg)
+
+Instead of:
+
+![Right User Flow](images/preferrable_flow.svg)
+
+Users are required to:
+
+- select a selling platform
+- choose a subscription plan
+- enter payment information
+
+before they can experience any product value!
+
+### Hypothesis
+
+A significant portion of Day-0 churn may be caused by users abandoning onboarding before reaching their first value moment due to:
+
+- mandatory setup steps
+- lack of product exploration
+- payment before product experience
+
+### Validation Data
+
+- Sign-up -> Channel Selection conversion
+- Channel Selection -> Pricing conversion
+- Pricing page exit rate
+- Pricing -> Trial Start conversion
+- Session recordings
+- Time spent on Pricing page
+- Interviews with churned users
+
 ### KPI C: Expand Product Finding Offering
 
+The existing Product Finding experience is feature-rich but marketplace-driven. It successfully increases product discovery but provides limited decision support. The opportunity is not to expand the catalog, but to improve product selection quality.
+
 ## Key Product Insights
+
+### Insight 1
+
+Users are asked to commit financially before experiencing product value.
+
+### Insight 2
+
+The biggest activation bottleneck occurs between product import and first sale.
+![The Bottleneck](images/bottleneck.svg)
+
+### Insight 3
+
+Product Finding supports exploration but not confident decision making.
 
 ## UX Improvement Opportunities
 
 ### 1. Product Preview & Delayed Paywall
+
+#### Problem
+
+Users encounter a paywall before experiencing the core value proposition.
+
+#### Solution
+
+Provide limited access before payment:
+
+- Dashboard preview
+- Product Research demo
+- Sample winning products
+- Interactive walkthrough
+
+#### Expected Impact
+
+- Lower Day-0 Churn
+- Higher activation
+- Better trial quality
+
+#### Related OKRs:
+
+- KPI A
+- KPI B
+
 ### 2. First Sale Accelerator
+
+#### Problem
+
+Users receive little guidance after importing products.
+
+#### Solution
+
+Activation checklist with milestone tracking.
+
+#### Expected Impact
+
+- Faster Time-to-First-Sale
+- Higher activation
+- More paid orders
+
+#### Related OKRs:
+
+- KPI A
+- KPI B
+
 ### 3. First Sale Probability Engine
 
-## Prioritization (ICE framework)
+#### Problem
+
+Users manually choose products with limited confidence.
+
+#### Solution
+
+AI-powered product scoring based on sales probability.
+
+#### Expected Impact
+
+- Better product selection
+- Higher first-sale conversion
+- Stronger Product Finding offering
+
+#### Related OKRs:
+
+- KPI A
+- KPI C
+
+## Impact–Confidence–Effort (ICE)
+
+| Initiative                        | Impact | Confidence | Effort |
+| --------------------------------- | ------ | ---------- | ------ |
+| Product Preview & Delayed Paywall | 9      | 7          | 4      |
+| First Sale Accelerator            | 8      | 8          | 3      |
+| First Sale Probability Engine     | 8      | 6          | 8      |
+
 
 ## Quarterly Roadmap
 
+![Roadmap](images/roadmap.svg)
+
 ## Risks & Assumptions
 
-## Success Metrics
+This case study is based on an external product review and publicly available information.
+
+The proposed initiatives should be validated through internal product analytics and user research before implementation.
+
+Key assumptions include:
+
+- The primary activation bottleneck occurs between product import and first sale.
+- Day-0 churn is influenced by the current onboarding and payment flow.
+- Improving product selection quality will increase first-sale conversion.
 
 ## Conclusion
+
+The analysis identified three major opportunities to support AutoDS business goals:
+
+1. Reduce early churn by allowing users to experience product value before payment.
+2. Increase activation by guiding users toward their first successful sale.
+3. Improve Product Finding by transforming it from a discovery tool into a decision-support system.
+
+These initiatives are designed to improve activation, retention, and product adoption, ultimately supporting the company’s objectives of increasing paid orders, reducing Day-0 churn, and strengthening its core value proposition.
